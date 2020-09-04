@@ -45,6 +45,7 @@ public class RoomController {
         return new ModelAndView("redirect:/hospital/Room");
     }
 
+    @RequestMapping(name = "/update/{id}",method = RequestMethod.PATCH)
     public ModelAndView update(@PathVariable("id")int id){
         Room room=service.getRoom(id);
         ModelAndView model=new ModelAndView();
